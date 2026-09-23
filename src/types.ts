@@ -113,6 +113,13 @@ export interface BlockedDateInfo {
   reason: string;
 }
 
+export interface BlockedDate {
+  id: string;
+  date: string;
+  reason: string;
+  createdAt?: string;
+}
+
 export interface ScheduleConfig {
   workingDays: number[]; // 0 = Domingo, 1 = Lunes, ..., 6 = Sábado
   maxBookingDaysAhead: number;

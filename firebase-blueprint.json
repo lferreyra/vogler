@@ -1,0 +1,121 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with contact details and garden preferences",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 150 },
+        "phone": { "type": "string", "maxLength": 50 },
+        "role": { "type": "string", "enum": ["user", "admin"] },
+        "avatarUrl": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "name", "email", "role"]
+    },
+    "Booking": {
+      "title": "Booking",
+      "description": "Appointment for garden maintenance or landscaping service",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "userName": { "type": "string", "maxLength": 100 },
+        "userEmail": { "type": "string", "maxLength": 150 },
+        "userPhone": { "type": "string", "maxLength": 50 },
+        "serviceId": { "type": "string", "maxLength": 100 },
+        "serviceTitle": { "type": "string", "maxLength": 150 },
+        "date": { "type": "string", "maxLength": 30 },
+        "timeSlot": { "type": "string", "maxLength": 50 },
+        "gardenSize": { "type": "string", "maxLength": 100 },
+        "propertyType": { "type": "string", "maxLength": 100 },
+        "notes": { "type": "string", "maxLength": 1000 },
+        "status": { "type": "string", "enum": ["pendiente", "confirmada", "completada", "cancelada"] },
+        "assignedCrew": { "type": "string", "maxLength": 150 },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "userName", "serviceId", "serviceTitle", "date", "timeSlot", "status"]
+    },
+    "Lead": {
+      "title": "Lead",
+      "description": "Quick quote lead inquiry from visitors",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 100 },
+        "phone": { "type": "string", "maxLength": 50 },
+        "service": { "type": "string", "maxLength": 150 },
+        "notes": { "type": "string", "maxLength": 1000 },
+        "status": { "type": "string", "enum": ["nuevo", "contactado", "cotizado", "descartado"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "name", "phone", "service", "status"]
+    },
+    "BlockedDate": {
+      "title": "BlockedDate",
+      "description": "Dates when booking is disabled due to weather, holidays or maintenance",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "date": { "type": "string", "maxLength": 30 },
+        "reason": { "type": "string", "maxLength": 200 },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "date", "reason"]
+    },
+    "ScheduleConfig": {
+      "title": "ScheduleConfig",
+      "description": "Operating hours, delay tolerance notice and schedule configuration",
+      "type": "object",
+      "properties": {
+        "delayNoticeMinutes": { "type": "number" },
+        "isDelayNoticeActive": { "type": "boolean" },
+        "delayNoticeExplanation": { "type": "string", "maxLength": 500 },
+        "bookingAdvanceDays": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["delayNoticeMinutes", "isDelayNoticeActive", "bookingAdvanceDays"]
+    },
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "description": "Global business configuration",
+      "type": "object",
+      "properties": {
+        "businessName": { "type": "string", "maxLength": 100 },
+        "phone": { "type": "string", "maxLength": 50 },
+        "whatsapp": { "type": "string", "maxLength": 50 },
+        "address": { "type": "string", "maxLength": 200 },
+        "coverageZone": { "type": "string", "maxLength": 300 }
+      },
+      "required": ["businessName", "phone", "whatsapp"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles and private settings"
+    },
+    "/bookings/{bookingId}": {
+      "schema": "Booking",
+      "description": "Client service appointments"
+    },
+    "/leads/{leadId}": {
+      "schema": "Lead",
+      "description": "Quick quote requests and inquiries"
+    },
+    "/blockedDates/{blockedDateId}": {
+      "schema": "BlockedDate",
+      "description": "Unavailable calendar days"
+    },
+    "/settings/schedule": {
+      "schema": "ScheduleConfig",
+      "description": "System operating schedule and delay tolerance banner"
+    },
+    "/settings/general": {
+      "schema": "SiteSettings",
+      "description": "General company contact and warranty settings"
+    }
+  }
+}

@@ -28,7 +28,6 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { label: 'Inicio', view: 'home' as const },
     { label: 'Servicios', view: 'services' as const },
-    { label: 'Proyectos', view: 'projects' as const },
     { label: 'Nosotros', view: 'about' as const },
     { label: 'Preguntas frecuentes', view: 'faq' as const },
     { label: 'Contacto', view: 'contact' as const },

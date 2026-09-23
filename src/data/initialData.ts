@@ -289,9 +289,9 @@ export const INITIAL_SITE_SETTINGS: SiteSettings = {
 
 export const DEMO_USERS: Record<string, User> = {
   customer: {
-    id: 'usr-lucas',
-    name: 'Lucas Ferreyra',
-    email: 'lucas.ferreyra@gmail.com',
+    id: 'usr-jhon',
+    name: 'Jhon Doer',
+    email: 'jhondoer@ejemplo.com',
     phone: '+54 351 555-0192',
     role: 'user',
     avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
@@ -327,9 +327,9 @@ export const DEMO_USERS: Record<string, User> = {
 export const INITIAL_BOOKINGS: Booking[] = [
   {
     id: 'BK-2026-081',
-    userId: 'usr-lucas',
-    userName: 'Lucas Ferreyra',
-    userEmail: 'lucas.ferreyra@gmail.com',
+    userId: 'usr-jhon',
+    userName: 'Jhon Doer',
+    userEmail: 'jhondoer@ejemplo.com',
     userPhone: '+54 351 555-0192',
     serviceId: 'corte-cesped',
     serviceTitle: 'Corte de Césped',
@@ -350,9 +350,9 @@ export const INITIAL_BOOKINGS: Booking[] = [
   },
   {
     id: 'BK-2026-074',
-    userId: 'usr-lucas',
-    userName: 'Lucas Ferreyra',
-    userEmail: 'lucas.ferreyra@gmail.com',
+    userId: 'usr-jhon',
+    userName: 'Jhon Doer',
+    userEmail: 'jhondoer@ejemplo.com',
     userPhone: '+54 351 555-0192',
     serviceId: 'poda',
     serviceTitle: 'Poda de Cercos Vivos',

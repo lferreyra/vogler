@@ -10,6 +10,7 @@ export const AuthModal: React.FC = () => {
     authModalMode,
     login,
     loginAsDemo,
+    signInWithGoogle,
     register,
     navigateTo
   } = useApp();
@@ -19,6 +20,7 @@ export const AuthModal: React.FC = () => {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [isSigningInGoogle, setIsSigningInGoogle] = useState(false);
 
   if (!isAuthModalOpen) return null;
 
@@ -75,7 +77,7 @@ export const AuthModal: React.FC = () => {
                 onClick={() => loginAsDemo('customer')}
                 className="py-2 px-3 rounded-xl bg-white border border-neutral-200 hover:border-[#12382C] text-[#12382C] font-semibold text-center shadow-2xs transition-all hover:bg-white"
               >
-                👤 Cliente (Lucas)
+                👤 Cliente (Jhon Doer)
               </button>
               <button
                 type="button"
@@ -91,12 +93,22 @@ export const AuthModal: React.FC = () => {
           </div>
         )}
 
-        {/* Google Demo Login */}
+        {/* Google Real Firebase Login */}
         {mode !== 'forgot' && (
           <button
             type="button"
-            onClick={() => loginAsDemo('customer')}
-            className="w-full py-2.5 px-4 mb-4 rounded-xl border border-neutral-300 hover:bg-neutral-50 font-medium text-xs text-neutral-700 flex items-center justify-center gap-3 transition-colors shadow-2xs"
+            disabled={isSigningInGoogle}
+            onClick={async () => {
+              setIsSigningInGoogle(true);
+              try {
+                await signInWithGoogle();
+              } catch {
+                // fall back gracefully
+              } finally {
+                setIsSigningInGoogle(false);
+              }
+            }}
+            className="w-full py-2.5 px-4 mb-4 rounded-xl border border-neutral-300 hover:bg-neutral-50 font-medium text-xs text-neutral-700 flex items-center justify-center gap-3 transition-colors shadow-2xs disabled:opacity-50"
           >
             <svg className="w-4 h-4" viewBox="0 0 24 24">
               <path
@@ -116,7 +128,7 @@ export const AuthModal: React.FC = () => {
                 d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
               />
             </svg>
-            <span>Continuar con Google</span>
+            <span>{isSigningInGoogle ? 'Conectando con Google...' : 'Continuar con Google (Firebase Auth)'}</span>
           </button>
         )}
 

@@ -11,7 +11,6 @@ import { ServicesView } from './components/views/ServicesView';
 import { ServiceDetailView } from './components/views/ServiceDetailView';
 import { AboutView } from './components/views/AboutView';
 import { ContactView } from './components/views/ContactView';
-import { ProjectsPortfolio } from './components/home/ProjectsPortfolio';
 import { FinalCTA } from './components/home/FinalCTA';
 import { AuthModal } from './components/modals/AuthModal';
 import { QuickQuoteModal } from './components/modals/QuickQuoteModal';
@@ -29,18 +28,12 @@ export const App: React.FC = () => {
       case 'home':
         return <Home />;
       case 'services':
+      case 'projects':
         return <ServicesView />;
       case 'service-detail':
         return <ServiceDetailView />;
       case 'booking':
         return <BookingFlow />;
-      case 'projects':
-        return (
-          <div className="pt-24 min-h-screen bg-[#FAFAF7]">
-            <ProjectsPortfolio />
-            <FinalCTA />
-          </div>
-        );
       case 'about':
         return <AboutView />;
       case 'contact':

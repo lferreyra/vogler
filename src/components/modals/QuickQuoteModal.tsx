@@ -81,7 +81,7 @@ export const QuickQuoteModal: React.FC = () => {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Ej. Lucas Ferreyra"
+                    placeholder="Ej. Jhon Doer"
                     className="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#12382C]"
                   />
                 </div>
