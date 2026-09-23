@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Leaf Gradients with natural botanical depth -->
+    <linearGradient id="voglerLeafLeft" x1="0.1" y1="0.9" x2="0.8" y2="0.1">
+      <stop offset="0%" stop-color="#236B28"/>
+      <stop offset="35%" stop-color="#3FA644"/>
+      <stop offset="80%" stop-color="#7BC338"/>
+      <stop offset="100%" stop-color="#9DD854"/>
+    </linearGradient>
+    <linearGradient id="voglerLeafRight" x1="0.2" y1="0.8" x2="0.9" y2="0.1">
+      <stop offset="0%" stop-color="#28772C"/>
+      <stop offset="50%" stop-color="#4CAE4E"/>
+      <stop offset="100%" stop-color="#8BC34A"/>
+    </linearGradient>
+    <linearGradient id="voglerStem" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#1B5E20"/>
+      <stop offset="100%" stop-color="#43A047"/>
+    </linearGradient>
+    
+    <!-- Rich Fertile Soil Gradient -->
+    <radialGradient id="voglerSoil" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#5A3720"/>
+      <stop offset="60%" stop-color="#3D2314"/>
+      <stop offset="100%" stop-color="#24140A"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ICON GROUP -->
+  <g transform="translate(10, 8)">
+    <!-- Shovel Outer Dark Green Border -->
+    <path d="M 28 80 C 28 76 31 73 35 73 L 64 73 C 67 73 69 75 70 78 L 71 115 C 71 118 73 121 76 121 C 79 121 81 118 81 115 L 82 78 C 83 75 85 73 88 73 L 117 73 C 121 73 124 76 124 80 C 124 108 114 136 86 156 C 80 160 72 160 66 156 C 38 136 28 108 28 80 Z" 
+          fill="#0F3822" />
+
+    <!-- Shovel Inner Soil Bed -->
+    <path d="M 33 80 C 33 105 42 131 69 149 C 73 152 79 152 83 149 C 110 131 119 105 119 80 L 92 80 L 91 114 C 90 123 84 130 76 130 C 68 130 62 123 61 114 L 60 80 Z" 
+          fill="url(#voglerSoil)" />
+          
+    <!-- Soil granules texture dots -->
+    <g fill="#7A4D2E" opacity="0.8">
+      <circle cx="45" cy="95" r="1.6"/>
+      <circle cx="52" cy="110" r="1.8"/>
+      <circle cx="42" cy="118" r="1.4"/>
+      <circle cx="58" cy="125" r="1.6"/>
+      <circle cx="68" cy="138" r="1.7"/>
+      <circle cx="76" cy="144" r="1.5"/>
+      <circle cx="84" cy="138" r="1.6"/>
+      <circle cx="94" cy="125" r="1.5"/>
+      <circle cx="108" cy="100" r="1.7"/>
+      <circle cx="100" cy="115" r="1.4"/>
+      <circle cx="48" cy="85" r="1.3"/>
+      <circle cx="104" cy="86" r="1.5"/>
+    </g>
+    <g fill="#180C05" opacity="0.7">
+      <circle cx="40" cy="105" r="1.8"/>
+      <circle cx="50" cy="120" r="1.5"/>
+      <circle cx="62" cy="132" r="1.6"/>
+      <circle cx="76" cy="136" r="2.0"/>
+      <circle cx="90" cy="132" r="1.6"/>
+      <circle cx="102" cy="108" r="1.8"/>
+      <circle cx="112" cy="92" r="1.5"/>
+    </g>
+
+    <!-- Center Handle Slot (Clean cut-out channel) -->
+    <path d="M 68 73 L 69 114 C 69 118 72 121 76 121 C 80 121 83 118 83 114 L 84 73 Z" 
+          fill="#FAFAF7" />
+
+    <!-- Sprout Stem -->
+    <path d="M 74 116 L 74 65 C 74 50 78 38 82 28 C 81 28 78 36 76 48 L 76 116 Z" 
+          fill="url(#voglerStem)" />
+
+    <!-- Left Large Leaf -->
+    <path d="M 77 48 C 74 38 68 28 54 18 C 38 6 22 10 24 28 C 26 44 44 56 68 56 C 73 56 75 52 77 48 Z" 
+          fill="url(#voglerLeafLeft)" />
+    <!-- Left Leaf Highlights & Inner Rib -->
+    <path d="M 75 48 C 65 44 52 36 40 25 C 33 19 28 14 24 28 C 23 20 32 12 46 15 C 60 18 70 32 75 48 Z" 
+          fill="#C6FF00" opacity="0.4" />
+    <path d="M 76 48 C 68 42 54 32 40 22 C 32 17 26 18 24 28" 
+          stroke="#1B5E20" stroke-width="1.3" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+    <!-- Right Small Leaf -->
+    <path d="M 80 44 C 84 38 92 28 108 26 C 122 24 126 36 116 45 C 104 54 90 53 82 48 C 80 46 80 44 80 44 Z" 
+          fill="url(#voglerLeafRight)" />
+    <path d="M 82 46 C 90 42 102 36 112 32 C 120 28 123 32 116 45" 
+          stroke="#1B5E20" stroke-width="1.1" stroke-linecap="round" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- TYPOGRAPHY: "vogler" -->
+  <!-- Modern clean geometric lowercase sans-serif with smooth flat baseline (NO GRASS) -->
+  <g fill="currentColor" id="voglerWordmark">
+    <!-- Letter v -->
+    <path d="M 152 76 L 171 76 L 187 122 L 203 76 L 222 76 L 198 136 L 176 136 Z" />
+    
+    <!-- Letter o -->
+    <path d="M 264 74 C 283 74 298 88 298 106 C 298 124 283 138 264 138 C 245 138 230 124 230 106 C 230 88 245 74 264 74 Z M 264 91 C 255 91 248 97 248 106 C 248 115 255 121 264 121 C 273 121 280 115 280 106 C 280 97 273 91 264 91 Z" />
+    
+    <!-- Letter g -->
+    <path d="M 338 76 L 338 88 C 334 80 324 74 312 74 C 295 74 282 87 282 106 C 282 125 295 138 312 138 C 324 138 334 132 338 124 L 338 134 C 338 147 330 154 316 154 C 305 154 297 150 293 144 L 280 154 C 288 165 301 171 316 171 C 342 171 356 156 356 132 L 356 76 Z M 319 91 C 328 91 336 97 336 106 C 336 115 328 121 319 121 C 310 121 302 115 302 106 C 302 97 310 91 319 91 Z" />
+    
+    <!-- Letter l -->
+    <path d="M 368 52 L 386 52 L 386 136 L 368 136 Z" />
+    
+    <!-- Letter e -->
+    <path d="M 428 74 C 410 74 396 87 396 106 C 396 125 410 138 430 138 C 443 138 454 132 460 122 L 445 113 C 442 118 437 121 430 121 C 421 121 415 116 414 108 L 463 108 C 464 106 464 103 464 101 C 464 85 450 74 428 74 Z M 414 97 C 416 92 421 88 428 88 C 435 88 441 92 443 97 Z" />
+    
+    <!-- Letter r -->
+    <path d="M 474 76 L 492 76 L 492 88 C 496 80 504 75 515 75 L 518 75 L 518 94 C 504 94 492 101 492 114 L 492 136 L 474 136 Z" />
+  </g>
+</svg>

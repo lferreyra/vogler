@@ -1,0 +1,6 @@
+{
+  "name": "VOGLER - Parques y Jardines",
+  "description": "Web app premium de jardinería, corte de césped, poda, diseño de jardines y paisajismo profesional con sistema de reservas y gestión integral.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
